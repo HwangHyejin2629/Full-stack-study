@@ -4,7 +4,7 @@
 
 
 ## 필요한 어노테이션
-1. @Service <br/>
+### @Service <br/>
 서비스 클래스임을 알려주는 어노테이션 @Component 의 자식 어노테이션
 @Component : bean생성하는 어노테이션
 
