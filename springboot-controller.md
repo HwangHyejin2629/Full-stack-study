@@ -1,8 +1,7 @@
-<hr>
+
 
 # Controller 레이어
 
-<hr/>
 
 ## 필요한 어노테이션
 1. @RestController
@@ -76,11 +75,11 @@ public class UserApiController {
 ```
 7.@builder
 
-<hr/>
+
 
 ## 필요한 클래스
 
-<hr/>
+
 
 1. ResponseEntity
 HTTP 응답을 세밀하게 제어할 수 있는 방법 
