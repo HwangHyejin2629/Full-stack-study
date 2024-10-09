@@ -56,7 +56,7 @@ fetchData()  //결과에 따라 then과 catch 블록이 실행됩니다.
 - Promise 기반의 비동기 처리 방식
 - 동기 처리같아 보이는 비동기 처리 수행
 - await : 함수 앞에 붙으며, Promise가 해결될때까지 기다린다.
-- async : 함수 앞에 붙으며, 비동기함수임을 나타낸다.
+- async : 함수 앞에 붙으며, 비동기함수임을 나타낸다.<br/>
 비동기함수는 항상 Promise 반환 <br/>
 함수 내부에서 return값은 자동으로 resolve로 처리된다.
 ```js
