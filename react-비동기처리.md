@@ -55,10 +55,10 @@ fetchData()  //결과에 따라 then과 catch 블록이 실행됩니다.
 
 - Promise 기반의 비동기 처리 방식
 - 동기 처리같아 보이는 비동기 처리 수행
-- await : 함수 앞에 붙으며, Promise가 해결될때까지 기다린다.
 - async : 함수 앞에 붙으며, 비동기함수임을 나타낸다.<br/>
 비동기함수는 항상 Promise 반환 <br/>
 함수 내부에서 return값은 자동으로 resolve로 처리된다.
+
 ```js
 async function fetchData() {
   return '데이터';
@@ -67,3 +67,16 @@ async function fetchData() {
 // fetchData()는 Promise를 반환함
 fetchData().then(data => console.log(data)); // "데이터"
 ```
+- await : 비동기 함수 앞에 붙으며, Promise가 해결될때까지 일시 중지된다. 동기적 실행같이 보인다.
+```js
+useEffect(()=>{
+  async function fetchData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts'); // 데이터를 기다림
+    const data = await response.json(); // JSON으로 변환 완료될 때까지 기다림
+    return data;
+  }
+
+  fetchData().then(posts => console.log(posts)); // Promise가 resolve되면 posts 출력
+},[]) //컴포넌트가 처음 렌더링 할때 한번만 실행
+```
+
