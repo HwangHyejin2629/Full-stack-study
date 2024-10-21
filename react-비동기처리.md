@@ -58,7 +58,7 @@ fetchData()  //결과에 따라 then과 catch 블록이 실행됩니다.
 - async : 함수 앞에 붙으며, 비동기함수임을 나타낸다.<br/>
 비동기함수는 항상 Promise 반환 <br/>
 함수 내부에서 return값은 자동으로 resolve로 처리된다.
-
+- useEffect() : async를 사용할때 쓰는 훅, React의 생명주기나 상태 업데이트를 직접 제어할 수 없기 때문이다.
 ```js
 async function fetchData() {
   return '데이터';
