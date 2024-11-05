@@ -1,6 +1,5 @@
-# 컴포넌트
-## 내장함수
-### App
+# 냐장컴포넌트
+## App
 
 - <App /> : src 폴더를 만들어서 App.js 를 만들어 내용을 표현하고, root 에 있는 App.js 에 연결하여 화면으로 보여준다.
 ```js
@@ -9,7 +8,7 @@ import App from './src/App';
 export default App;
 ```
 
-### View Fragment
+## View Fragment
 - <View> </View> : <div> 와 비슷한 역할을 한다 태그들을 하나로 감싸서 에러 방지
 - <Fragment> </Fragment>, <> </>  : <View> 대신 사용가능하며, key속성을 사용하여 리스트 렌더링시 유용
 - <Text> 글 내용 </Text> : 글을 쓸때 글 담는 태그
@@ -24,10 +23,10 @@ export default function App() {
   );
 }
 ```
-### Text
+## Text
 - <Text></Text> : 텍스트를 표시할때 사용 <p>,<span>과 비슷한 역할
 
-### Button
+## Button
 - 사용법 : https://reactnative.dev/docs/button 
 - title : 버튼 내부에 출력되는 텍스트
 - onPress : 버튼 눌렸을때 호출 되는 함수 지정
@@ -35,7 +34,7 @@ export default function App() {
 ```js
 <Button title="button" onPress={()=> alert('Click!!')}/>
 ```
-### ScrollView
+## ScrollView
 - 스크롤 가능한 뷰 만들때 사용
 ```js
 import React from 'react';
@@ -67,10 +66,8 @@ const styles = StyleSheet.create({
 });
 
 ```
-## 커스텀 컴포넌트
-- src 폴더 안에 component 폴더 안에 만들어서 사용한다.
 
-### Pressable 
+## Pressable 
 - 터치 이벤트에 세부적인 제어를 제공
 - onPress: 사용자가 컴포넌트를 눌렀다 떼었을 때 호출된다.
 - onPressIn: 사용자가 컴포넌트를 누르는 순간 호출된다.
