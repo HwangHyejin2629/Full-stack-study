@@ -66,6 +66,16 @@ const styles = StyleSheet.create({
 });
 
 ```
+## TextInput
+- 입력칸 만드는 컴포넌트
+```js
+<TextInput
+  onChangeText={onChangeText}
+  value={text}
+  placeholder="입력하세요"
+  style={styles.input}
+/>
+```
 
 ## Pressable 
 - 터치 이벤트에 세부적인 제어를 제공
