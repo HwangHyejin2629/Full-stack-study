@@ -120,3 +120,10 @@ const App = () => {
 export default App;
 
 ```
+
+## FlatList
+- 데이터 목록을 간편하게 렌더링
+- 배열형태의 데이터를 받아 각 항목을 화면에 표시
+- data : 리스트에 표시할 데이터 배열
+- renderItem: 각 아이템을 어떻게 렌더링할지 정의하는 함수
+- keyExtractor : 각 아이템의 고유한 키 값을 지정하는 속성

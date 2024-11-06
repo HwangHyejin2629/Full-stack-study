@@ -43,4 +43,23 @@ const result1 = arr1.find(item => item>30);
 
 ## Math
 - 수학적인 상수와 함수를 위한 속성과 메서드를 가진 내장 객체
+- Math.floor()  : 버림
+- Math.ceil :  올림
+- Math.round : 반올림
+- Math.random() : 0~1사이의 실수 랜덤 생성
+- Math.floor(Math.random()*100) : 0~99 출력
+- Math.floor(Math.random()*100)+1 : 1~100 츨력
 
+## ?. 옵셔널체이닝
+- ?.은 ?.'앞’의 평가 대상이 undefined나 null이면 평가를 멈추고 undefined를 반환, 있으면 해당 값 반환 (에러로 처리되지 않음)
+```js
+let user = {}; // 주소 정보가 없는 사용자
+alert( user?.address?.street ); 
+```
+
+## toFixed()
+
+- toFixed(자리수) 지정된 소수점 자리수에서 반올림 해주는 메서드, 문자열로 반환 ->parseFloat()
+
+## Date
+- Date.now() : 현재날짜
