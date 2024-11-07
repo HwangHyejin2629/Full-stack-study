@@ -4,6 +4,8 @@
 - window에서는 안드로이드만 가능, mac에서는 둘다 가능하다.
 - JSX : HTML처럼 생긴 자바스크립트, 바벨로 자바스크립트 코드로 변환된다.
 
+- expo init install 프로젝트이름
+
 ```js
 function formatName(user){
    return user.firstName + ' '+ user.lastName;
