@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
 - 그림자는 리액트 네이티브에서 플랫폼마다 다르게 적용되는 스타일 속성
 - 리액트 네이티브에서 제공하는 Platform 모듈을 이용해 각 플랫폼마다 다른 코드가 적용되도록 코드를 작성할 수 있다.
 - 문서 : https://bit.ly/react-native-platform
-
+### borderBottomWidth : 아래 태두리 두께조절
 
 
 ## 여러개 스타일 적용
