@@ -18,6 +18,12 @@
 
 ## 네비게이션 구조
 - 리액트 네비게이션에는 NavigationContainer 컴포넌트, Navigator 컴포넌트, Screen 컴포넌트가 있다. (포함관계 : NavigationContainer 안에 Navigator 안에 Screen)
+
+### Navigator 컴포넌트
+- 계층구조 상태 관리하는 컨테이너 역할 (감싸는 역할, 포함하는 역할)
+
+### Screen 컴포넌트 
+- 화면으로 사용할 컴포넌트 지정
 - name : 이 이름을 통해 다른 화면에서 해당 화면으로 네비게이션할 수 있다
 - component : 이 속성에 지정된 컴포넌트가 화면에 렌더링된다
 - Screen으로 에 해당되는 컴포넌트에는 navigation 과 route가 넘어간다.
@@ -38,6 +44,8 @@ const 컴포넌트 =({navigation, route})=>{
      )
  }
 ```
+
+
 
 ## 스택 네비게이션
 - 화면위에 화면을 쌓아 이동 : push 들어가기, pop 나가기
@@ -60,7 +68,11 @@ const 컴포넌트 =({navigation, route})=>{
     <Stack.Screen name="호출될이름2" component={이동할 컴포넌트2}/>
 </Stack.Navigator>
 ```
-## 스타일 주기
+
+## 설정의 우선순위
+- 작은 범위 설정일수록 우선순위가 높다
+
+### 스타일 주기
 - Navigation 에 스타일주기 : 하위 스크린에 다 적용
 ```js
 <Stack.Navigator 
@@ -165,6 +177,7 @@ const Item = ({ navigation, route }) => {
 
 #### headerShown
 - 화면옵션으로 Navigator 컴포넌트의 screenOptions에 설정하여 전체 화면의 헤더가 보이지 않게 설정
+- true, false 값을 가진다.
 ```js
 <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
 
@@ -173,6 +186,50 @@ const Item = ({ navigation, route }) => {
 ## 탭 네비게이션
 - npm install @react-navigation/bottom-tabs@6.5.20 --force
 - import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+- 이동할때 네비게이션 주지 않는다.
+
+### 아이콘 설정하기
+```js
+import {MaterialCommunityIcons} from '@expo/vector-icons'
+
+const TabIcon = ({name, size, color}) => {
+    return <MaterialCommunityIcons name={name} size={size} color={color} />;
+}
 
 
 
+const Tab = createBottomTabNavigator();
+
+const TabNavigation = () => {
+    return (
+      <Tab.Navigator
+      initialRouteName='Settings'>
+        <Tab.Screen 
+            name="Mail" 
+            component={Mail}
+            options={{
+                tabBarIcon: props => TabIcon({...props, name:'email'}),
+            }} />
+        <Tab.Screen 
+            name="Meet" 
+            component={Meet}
+            options={{
+                tabBarIcon: props => TabIcon({...props, name:'video'}),
+            }} />
+        <Tab.Screen 
+            name="Settings" 
+            component={Settings}
+            options={{
+                tabBarIcon: props => TabIcon({...props, name:'settings'}),
+            }} />
+      </Tab.Navigator>
+    );
+  };
+
+  export default TabNavigation;
+```
+
+### 라벨수정하기
+```js
+<Tab.Screen name="Mail" component={Mail} options={{tabBarLabel:'Inbox'}} />
+```

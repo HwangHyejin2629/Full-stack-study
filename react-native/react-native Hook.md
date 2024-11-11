@@ -1,6 +1,14 @@
-# 내장 hook
+# hook
 
 <hr>
+
+## 커스텀 훅 만들기
+
+```js
+useOO=매개변수=>{
+    실행할 내용
+}
+```
 
 ## useState
 - const[state, setter]=useState(초기값)
@@ -39,12 +47,13 @@ useEffect(()=>{return()=>실행문},[])
 - useEffect 자체가 비동기 동작을 직접적으로 지원을 안함
 
 ### 클린업함수
-- 컴포넌트가 언마운트 되거나, useEffect가 다시 실행되기 전에 실행
+- 컴포넌트가 언마운트 되거나, useEffect가 다시 실행되기 전에 반환가는 것 
+- try catch 의 final과 같은 역할
 - 리소스 정리, 이벤트리스너 제거, 타이머 정리 등 뒷처리
 ```js
 useEffect(()=>{
     실행문
-    return ()=>{}
+    return ()=>{} //클린업함수
 })
 ```
 - 리소스를 정리, 이벤트리스너 제거하거나, 타이머 정하기 위해 사용한다.
@@ -80,7 +89,9 @@ useEffect(()=>{
 <hr>
 
 ## useRef
-- const ref=useRef() 
+- const ref=useRef() : current 들어있음
+- <Input ref={ref}>
+
 1.  특정 엘리먼트 선택할 수 있다.(querySelector처럼 태그 선택 가능)
 ```js
 const refName=useRef(null) // ------{current:null}
@@ -93,7 +104,7 @@ const refName=useRef(null) // ------{current:null}
 
 ## useMemo
 - useMemo(()=>{},[])
-- 특정 연산 결과를 저장해두고, 필요시 꺼내 씀, 불필요한 반복 계산을 피한다.
+- 특정 연산 결과를 저장해두고, 필요시 꺼내 씀, 불필요한 반복 계산을 피한다. (많이 반복할때만 사용)
 - 의존성 배열에 따라 값이 바뀔때만 연산 다시 수행하도록 설정가능
 ```js
 const list = ['JavaScript', 'Expo', 'Expo', 'React Native'];

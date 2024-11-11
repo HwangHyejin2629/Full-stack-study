@@ -4,6 +4,7 @@
 - npm install styled-components --force
 
 
+
 ## 인라인 스타일링
 - 컴포넌트에 직접 스타일 입력하는 방식
 ```js
@@ -92,19 +93,22 @@ const styles = StyleSheet.create({
 - stretch: alignItems의 방향으로 확대
 - baseline : 컴포넌트 내부의 텍스트 베이스라인을 기준으로 정렬
 ![justify](../img/align.jpg)
-
-### backgroundColor : 배경색 지정
-### fontSize : 글자 크기 지정, 숫자로 입력 
 ### padding : 테두리 내부 빈공간 지정
 ### margin : 테두리 외부 빈공간 지정
+
+### backgroundColor : 배경색 지정
+### borderBottomWidth : 아래 태두리 두께조절
+
+
+### fontSize : 글자 크기 지정, 숫자로 입력 
 ### fontWeight : 글자 두께 지정 ''사이에 숫자로 표시
 ### color : 글자 색상 지정
 ### 그림자
 - 그림자는 리액트 네이티브에서 플랫폼마다 다르게 적용되는 스타일 속성
 - 리액트 네이티브에서 제공하는 Platform 모듈을 이용해 각 플랫폼마다 다른 코드가 적용되도록 코드를 작성할 수 있다.
 - 문서 : https://bit.ly/react-native-platform
-### borderBottomWidth : 아래 태두리 두께조절
 
+ 
 
 ## 여러개 스타일 적용
 - 뒤에 오는 스타일이 앞의 스타일을 덮는다.
