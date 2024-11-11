@@ -160,4 +160,43 @@ function reducer(state,action){
 2. 복잡한 로직이 필요할때 : 상태 변경에 따라 다양한 조건을 검토, 여러단계를 거쳐 상태 변경이 필요할때
 3. 상태 업데이트 로직을 컴포넌트 밖으로 분리하고 싶을때 : reducer함수는 컴포넌트 외부에도 둘 수 있어 상태 관리 로직을 명확히 분리
 
+## useLayoutEffect
+- 컴포넌트의 레이아웃을 읽어오고 설정할때, 화면 크기에 따라 UI 요소의 위치나 크기를 동적으로 조정해야 할때 사용
+- 화면 그리기 전에 실행 : 화면이 보이기 전 UI를 수정할 수 있는 기회를 갖는다.
+- 애니메이션 및 레이아웃 전환 : 특정 상태가 변하면 UI 레이아웃에서 애니메이션을 추가해야하는 경우
+```js
+const Item = ({ navigation, route }) => {
 
+  useLayoutEffect(() => {
+
+    navigation.setOptions({
+
+      headerBackTitleVisible: false,
+      headerTintColor: '#ffffff',
+      headerLeft: ({ onPress, tintColor }) => {
+        return (
+          <MaterialCommunityIcons
+            name="keyboard-backspace"
+            size={30}
+            style={{ marginLeft: 11 }}
+            color={tintColor}
+            onPress={onPress}
+          />
+        )}
+      },
+      headerRight: ({ tintColor }) => (
+        <MaterialCommunityIcons
+          name="home-variant"
+          size={30}
+          style={{ marginRight: 11 }}
+          color={tintColor}
+          onPress={() => navigation.popToTop()}
+        />
+      ),
+      
+    });
+
+  }, [])
+
+}
+  ```
