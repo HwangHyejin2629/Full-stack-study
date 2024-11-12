@@ -1,4 +1,4 @@
-# 네비게이션 옵션
+# 네비게이션 중복 옵션
 - Navigator 에서 옵션 바꾸기 : screenOptions={{속성}}  
 <br/>Navigator 내의 Screen 모든 속성을 변경할 수 있다.
 

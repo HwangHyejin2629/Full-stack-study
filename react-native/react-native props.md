@@ -45,4 +45,9 @@ const MyButton = (props) => {
   }
 ```
 
-
+## props-type
+- npm install styled-components prop-types --force
+- prop-types는 React 컴포넌트에서 전달받는 props의 타입을 검증해주는 라이브러리
+1. 타입검증
+2. 기본값 설정
+3. 유연한 데이터 타입 설정
