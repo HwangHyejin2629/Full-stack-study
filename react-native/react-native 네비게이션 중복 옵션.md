@@ -43,7 +43,7 @@
 ```
 
 ### 헤더 감추기
-#### headerMode
+#### headerMode 
 - Navigator 의 컴포넌트 속성으로 헤더를 렌더링하는 방법 설정
 - 속성값
 <br/>float : 헤더가 상단에 유지되며 하나의 헤더를 사용 (ios), 화면 전환시 부드럽다
@@ -51,9 +51,13 @@
 <br/>none : 헤더가 렌더링 되지 않는다. (=false) 모든화면에서 헤더가 사라진다.
 
 #### headerShown
+- Screen 에서 사용
 - 화면옵션으로 Navigator 컴포넌트의 screenOptions에 설정하여 전체 화면의 헤더가 보이지 않게 설정
 - true, false 값을 가진다.
 ```js
 <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
 
 ```
+
+### 헤더 돌아가기 버튼 없애기
+- headerBackTitleVisible:false

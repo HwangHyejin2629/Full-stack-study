@@ -137,3 +137,23 @@ export default App;
 - data : 리스트에 표시할 데이터 배열
 - renderItem: 각 아이템을 어떻게 렌더링할지 정의하는 함수
 - keyExtractor : 각 아이템의 고유한 키 값을 지정하는 속성
+
+## Image
+
+### 이미지 원형으로 만들기
+```js
+const StyledImage=styled.Image`
+    background-color:${({theme})=>theme.imageBackground};
+    width:100px;
+    height:100px;
+    border-radius:${({rounded})=>{rounded?50:0}}px;
+`
+
+const Image = ({url, imageStyle}) => {
+    return(
+        <Container>
+            <StyledImage source={{uri:url}} style={imageStyle} rounded={rounded}/>
+        </Container>
+    )
+}
+```

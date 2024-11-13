@@ -91,7 +91,7 @@ useEffect(()=>{
 ## useRef
 - const ref=useRef() : current 들어있음
 - <Input ref={ref}>
-
+- forwardRef((props,ref)=>{}) : React에서 특정 컴포넌트가 받은 ref를 자식 컴포넌트의 특정 DOM 요소나 React Native 컴포넌트로 전달
 1.  특정 엘리먼트 선택할 수 있다.(querySelector처럼 태그 선택 가능)
 ```js
 const refName=useRef(null) // ------{current:null}
@@ -99,6 +99,9 @@ const refName=useRef(null) // ------{current:null}
 ```
 2. 리렌더링 없이 상태 유지할때 사용 : useRef 값이 바뀌어도 재 렌더링이 되지 않기 때문에 값이 바뀌어도 렌더링 필요하지 않은 경우 사용 
 - ex 타이머, 이전 값 추적, 스크롤 위치 추적
+
+```js
+
 
 <hr>
 

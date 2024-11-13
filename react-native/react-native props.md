@@ -26,28 +26,28 @@ const MyButton = (props) => {
 ...
 ```
 
-## propsTypes
+## PropsTypes
 - props의 타입을 잘못 전달하거나 필수로 전달해야하는 값을 누락시킬경우 경고메세지 보내는 방법
 - npm install prop-types
 - 타입 오류 설정 : 컴포넌트명.propTypes={키:PropType.타입종류}
 - 필수 오류 설정 : 컴포넌트명.propTypes={키:PropType.func.isRequired}
 
 ```js
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-const MyButton = (props) => {
+Image.defaultProps = {
+    rounded: false,
+    showButton: false,
+    onChangeImage:()=>{}
+}
 
-...
-
-  MyButton.propTypes = {
-      title: PropTypes.number
-      onPress : PropTypes.func.isRequired
-  }
+Image.propTypes = {
+    uri: PropTypes.string, //uri에 들어오는 값은 string 이어야 해
+    imageStyle: PropTypes.object,
+    rounded: PropTypes.bool,
+    shoeButton: PropTypes.bool,
+    onChangeImage:PropTypes.func,
+}
 ```
 
-## props-type
-- npm install styled-components prop-types --force
-- prop-types는 React 컴포넌트에서 전달받는 props의 타입을 검증해주는 라이브러리
-1. 타입검증
-2. 기본값 설정
-3. 유연한 데이터 타입 설정
+
