@@ -140,6 +140,13 @@ export default App;
 
 ## Image
 
+- source : 이미지 경로지정
+- style : 스타일 지정
+
+```js
+<Image source={{uri:'경로'}} style={styles.image}/>
+```
+
 ### 이미지 원형으로 만들기
 ```js
 const StyledImage=styled.Image`

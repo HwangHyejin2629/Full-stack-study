@@ -203,3 +203,10 @@ const Item = ({ navigation, route }) => {
 
 }
   ```
+## useSafeAreaInsets() 
+- 화면의 안전영역을 고려해 레이아웃을 조정할 떄 사용하는 함수(Hook)
+- import { useSafeAreaInsets } from "react-native-safe-area-context";
+- const 변수명 = useSafeAreaInsets() 
+- <View issets={변수명}>
+
+- hook은 {top,bottom,left,right} 형태의 객체를 반환 , 안전영역의 높이나 너비를 픽셀 단위로 제공
