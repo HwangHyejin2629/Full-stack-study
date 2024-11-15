@@ -29,6 +29,13 @@
 - Screen으로 에 해당되는 컴포넌트에는 navigation 과 route가 넘어간다.
 - route.param 으로 받아 사용할 수 있다.
 
+## 함수
+- navigation.navigate("호출될이름",{키:값}) : 이벤트시 해당경로로 가도록 설정
+- navigation.replace("호출될이름",{키:값}) : 되돌아가기 눌렀을때 대체되도록 설정
+
+
+
+
 ```js
 <NavigationContainer>
     <Stack.Navigator>
@@ -37,6 +44,7 @@
     </Stack.Navigator>
 </NavigationContainer>
 
+
 const 컴포넌트 =({navigation, route})=>{
      return(
         //navigation.navigate('') 로 이동할 수 있다.
@@ -44,5 +52,11 @@ const 컴포넌트 =({navigation, route})=>{
      )
  }
 ```
+### {키:값} 이동경로에서 받아쓰는 방법
 
-## screenOptions 속성
+```js
+const 컴포넌트명 = ({ route }) => {
+  // 전달된 데이터는 route.params 객체로 접근합니다.
+  const { 키1, 키2 } = route.params;
+}
+```
