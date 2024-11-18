@@ -58,6 +58,7 @@ useEffect(()=>{
 ```
 - 리소스를 정리, 이벤트리스너 제거하거나, 타이머 정하기 위해 사용한다.
 
+
 ### useEffect 첫번째 요소인 함수에 비동기 함수가 안되는이유
 - useEffect(async()=> 실행문) --- X 
 - useEffect(()=>{ const asc = async()=> 실행문}) ---- 안에 함수를 선언해서 사용
@@ -100,7 +101,6 @@ const refName=useRef(null) // ------{current:null}
 2. 리렌더링 없이 상태 유지할때 사용 : useRef 값이 바뀌어도 재 렌더링이 되지 않기 때문에 값이 바뀌어도 렌더링 필요하지 않은 경우 사용 
 - ex 타이머, 이전 값 추적, 스크롤 위치 추적
 
-```js
 
 
 <hr>
@@ -163,7 +163,9 @@ function reducer(state,action){
 2. 복잡한 로직이 필요할때 : 상태 변경에 따라 다양한 조건을 검토, 여러단계를 거쳐 상태 변경이 필요할때
 3. 상태 업데이트 로직을 컴포넌트 밖으로 분리하고 싶을때 : reducer함수는 컴포넌트 외부에도 둘 수 있어 상태 관리 로직을 명확히 분리
 
-## useLayoutEffect
+<hr>
+
+## useLayoutEffect(,)
 - 컴포넌트의 레이아웃을 읽어오고 설정할때, 화면 크기에 따라 UI 요소의 위치나 크기를 동적으로 조정해야 할때 사용
 - 화면 그리기 전에 실행 : 화면이 보이기 전 UI를 수정할 수 있는 기회를 갖는다.
 - 애니메이션 및 레이아웃 전환 : 특정 상태가 변하면 UI 레이아웃에서 애니메이션을 추가해야하는 경우
@@ -203,10 +205,14 @@ const Item = ({ navigation, route }) => {
 
 }
   ```
+
+<hr>
+
 ## useSafeAreaInsets() 
 - 화면의 안전영역을 고려해 레이아웃을 조정할 떄 사용하는 함수(Hook)
 - import { useSafeAreaInsets } from "react-native-safe-area-context";
-- const 변수명 = useSafeAreaInsets() 
-- <View issets={변수명}>
-
+```js
+const 변수명 = useSafeAreaInsets() 
+<View issets={변수명}>...</View>
+```
 - hook은 {top,bottom,left,right} 형태의 객체를 반환 , 안전영역의 높이나 너비를 픽셀 단위로 제공
