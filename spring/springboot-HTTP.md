@@ -1,4 +1,4 @@
-# HTTT 배경지식
+# HTTP 배경지식
 
 - HTTP : 웹에서 클라이언트와 서버간에 테이터를 주고 받기 위한 프로토콜(통신규약)
 
@@ -48,11 +48,14 @@ Connection: keep-alive
 - 400번대 : 요청이 잘못되었음
 - 500번대 : 서버에 문제가 있음
 
-### 콘텐츠 유형
+### Content-Type 콘텐츠 유형
 - text/html : HTML 문서
 - application/xml : XML 데이터
 - application/json : API 응답, JSON 데이터
 - application/javascript : 자바스크립트 파일
 - image/png , image/jpeg , image/gif , audio/mpeg , video/mp4 , application/pdf , application/zip
 
-##
+### Response Body
+
+- HTTP 응답의 일부로 클라이언트가 요청한 리소스나 데이터를 포함하는 본문
+- 포함할 수 있는 데이터 : HTML, JSON(주로사용), XML, Plain Text, 이미지 동영상(바이너리 파일형식)

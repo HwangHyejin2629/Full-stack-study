@@ -176,3 +176,14 @@ const Image = ({url, imageStyle}) => {
 1. 랜더링할 항목의 데이터를 배열로 전달
 2. 전달된 배열의 항목을 이용해 항목을 렌더링하는 함수
 3. 각 항목에 키를 추가하기 위해 고유한 값을 반환하는 함수
+
+```js
+<FlatList  
+    keyExtractor={item=>item['id'].toString()} 
+    data={channels}
+    renderItem={({item})=>(
+          <Item item={item} onPress={_handleItemPress}
+    />)}
+    windowSize={3}
+/>
+```
