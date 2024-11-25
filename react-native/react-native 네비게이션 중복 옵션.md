@@ -61,3 +61,8 @@
 
 ### 헤더 돌아가기 버튼 없애기
 - headerBackTitleVisible:false
+
+## 헤더 버튼만들기
+```js 
+<Stack.Screan option={{headerRight:()=>(<Pressable><아이콘컴포넌트/></Pressable>)}}
+```

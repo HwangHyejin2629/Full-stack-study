@@ -187,3 +187,10 @@ const Image = ({url, imageStyle}) => {
     windowSize={3}
 />
 ```
+
+## TextInput
+- placeholder : 입력전 글씨 써있게 하는것
+- multiline : 여러줄 쓸수 있게 함
+```js
+<TextInput style={[styles.input, styles.contentInput]} placeholder="내용을 입력하세요" placeholderTextColor='#aaa' multiline/>
+```

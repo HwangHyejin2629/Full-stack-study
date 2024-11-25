@@ -14,8 +14,13 @@
 
 - initialRouteName 으로 처음 나올 화면 지정가능
 ```js
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
 <Stack.Navigator initialRouteName="호출될이름1">
-    <Stack.Screen name="호출될이름1" component={이동할 컴포넌트1}/>
+    <Stack.Screen name="호출될이름1" component={이동할 컴포넌트1}/> 
+    {/*이동할컴포넌트에 </> 안씀 */}
     <Stack.Screen name="호출될이름2" component={이동할 컴포넌트2}/>
 </Stack.Navigator>
 ```
