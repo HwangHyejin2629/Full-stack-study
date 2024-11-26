@@ -58,6 +58,6 @@ formatName(user),
  
 1. Expo를 사용하는 방법 : 
  - Expo CLI 설치 : npm install -g expo-cli 
- - Expo 프로젝트 생성 : expo init 프로젝트이름
+ - Expo 프로젝트 생성 : expo init 프로젝트이름   npx react-native init 프로젝트 이름
  - Expo 프로젝트 실행 : cd 프로젝트이름 -> npm expo start 
 2. 리엑트 네이티브 CLI 를 사용하는방법
